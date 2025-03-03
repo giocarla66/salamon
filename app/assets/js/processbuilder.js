@@ -56,7 +56,7 @@ class ProcessBuilder {
         
         // Mod list below 1.13
         // Fabric only supports 1.14+
-        if(!mcVersionAtLeast('1.13', this.server.rawServer.minecraftVersion)){
+        if(!mcVersionAtLeast('1.16', this.server.rawServer.minecraftVersion)){
             this.constructJSONModList('forge', modObj.fMods, true)
             if(this.usingLiteLoader){
                 this.constructJSONModList('liteloader', modObj.lMods, true)
@@ -66,7 +66,7 @@ class ProcessBuilder {
         const uberModArr = modObj.fMods.concat(modObj.lMods)
         let args = this.constructJVMArguments(uberModArr, tempNativePath)
 
-        if(mcVersionAtLeast('1.13', this.server.rawServer.minecraftVersion)){
+        if(mcVersionAtLeast('1.16', this.server.rawServer.minecraftVersion)){
             //args = args.concat(this.constructModArguments(modObj.fMods))
             args = args.concat(this.constructModList(modObj.fMods))
         }
