@@ -56,7 +56,7 @@ class ProcessBuilder {
         
         // Mod list below 1.13
         // Fabric only supports 1.14+
-        if(!mcVersionAtLeast('1.21', this.server.rawServer.minecraftVersion)){
+        if(!mcVersionAtLeast('1.16.10', this.server.rawServer.minecraftVersion)){
             this.constructJSONModList('forge', modObj.fMods, true)
             if(this.usingLiteLoader){
                 this.constructJSONModList('liteloader', modObj.lMods, true)
