@@ -3,7 +3,7 @@ const { DistributionAPI } = require('helios-core/common')
 const ConfigManager = require('./configmanager')
 
 // Old WesterosCraft url.
-exports.REMOTE_DISTRO_URL = 'http://185.206.151.190/nebula/distribution.json'
+exports.REMOTE_DISTRO_URL = 'https://ariarpgmod.mtxserv.com/distribution.json'
 
 
 const api = new DistributionAPI(
